@@ -885,7 +885,7 @@ thinc==7.4.6
     # via spacy
 threadpoolctl==3.4.0
     # via scikit-learn
-tiktoken==0.6.0
+tiktoken~=0.8.0
     # via
     #   -r requirements.in
     #   langchain-openai
