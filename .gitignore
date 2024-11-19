@@ -28,3 +28,4 @@ oreilly
 .idea/modules.xml
 .idea/prompt-engineering-for-generative-ai-examples.iml
 .idea/vcs.xml
+/venv
