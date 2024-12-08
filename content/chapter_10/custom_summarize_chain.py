@@ -20,7 +20,6 @@ class DocumentSummary(BaseModel):
         Dict[str, str]
     ] = {}  # This comes natively from the LangChain document loader
 
-
 async def create_summary_from_text(
     document: Document,
     parser: PydanticOutputParser,
