@@ -4,8 +4,7 @@ from langchain.output_parsers import PydanticOutputParser
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 import gradio as gr
-import getpass
-import os
+from dotenv import load_dotenv
 
 # Custom imports:
 from content_collection import collect_serp_data_and_extract_text_from_webpages
@@ -16,7 +15,10 @@ from article_generation import ContentGenerator
 from image_generation_chain import create_image
 
 # Check if the SERPAPI_API_KEY environment variables are set:
-os.environ["SERPAPI_API_KEY"] = getpass.getpass("Enter your SERPAPI API key: ")
+# os.environ["SERPAPI_API_KEY"] = getpass.getpass("Enter your SERPAPI API key: ")
+
+# Load environment variables from .env file
+load_dotenv()
 
 
 def get_summary(topic):
@@ -220,4 +222,4 @@ with gr.Blocks() as demo:
             ],
         )
 
-demo.launch()
+demo.launch(share=True)
